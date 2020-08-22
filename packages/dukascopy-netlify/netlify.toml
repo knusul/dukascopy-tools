@@ -1,0 +1,8 @@
+[build]
+  functions = "packages/dukascopy-netlify/functions"
+
+
+[[redirects]]
+  from = "/api/:fn"
+  to = "/.netlify/functions/:fn"
+  status = 200
