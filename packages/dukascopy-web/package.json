@@ -1,5 +1,5 @@
 {
-  "name": "dukascopy-netlify",
+  "name": "dukascopy-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "antd": "^4.6.4",
     "dukascopy-node": "^1.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,9 +19,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:netlify": "netlify dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pre-commit": "echo dukascopy-web precommit"
   },
   "eslintConfig": {
     "extends": [

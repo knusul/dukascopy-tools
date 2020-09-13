@@ -3,6 +3,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { URL_ROOT } = require('dukascopy-node');
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 exports.handler = async (event, context) => {
   try {
     return {

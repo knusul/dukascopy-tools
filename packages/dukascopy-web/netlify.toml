@@ -1,5 +1,5 @@
 [build]
-  functions = "packages/dukascopy-netlify/functions"
+  functions = "packages/dukascopy-web/functions"
 
 
 [[redirects]]
