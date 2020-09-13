@@ -2,11 +2,13 @@ export { validator, validateConfig, schema } from './config-validator';
 export { normaliseDates } from './dates-normaliser';
 export { generateUrls, URL_ROOT } from './url-generator';
 export { BufferFetcher } from './buffer-fetcher';
+export { decompress } from './decompressor';
 export { processData } from './processor';
 export { formatOutput } from './output-formatter';
 
 export { Config, DefaultConfig, defaultConfig } from './config';
 export { Instrument, InstrumentType } from './config/instruments';
+export { InstrumentData, instrumentMetaData } from './config/instruments-metadata';
 export { Timeframe, TimeframeType } from './config/timeframes';
 export { Format, FormatType } from './config/format';
 export { Price, PriceType } from './config/price-types';
