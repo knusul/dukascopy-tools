@@ -10,16 +10,10 @@ import { GenerateUrlsInput } from './types';
 import { TimeRange } from '../utils/range';
 import { TimeframeType, Timeframe } from '../config/timeframes';
 import { PriceType } from '../config/price-types';
-import { InstrumentType } from '../config/instruments';
 
 export const URL_ROOT = 'https://datafeed.dukascopy.com/datafeed';
 
-function getUrl(
-  instrument: InstrumentType,
-  date: Date,
-  range: TimeRange,
-  priceType: PriceType
-): string {
+function getUrl(instrument: string, date: Date, range: TimeRange, priceType: PriceType): string {
   const [yearPad, monthPad, dayPad, hourPad] = getYMDH(date).map(pad);
 
   let url = `${URL_ROOT}/${instrument.toUpperCase()}/${yearPad}/`;
@@ -37,7 +31,7 @@ function getUrl(
   return url;
 }
 
-function getConstructor(instrument: InstrumentType, priceType: PriceType, endDate: Date) {
+function getConstructor(instrument: string, priceType: PriceType, endDate: Date) {
   return function construct(rangetype: TimeRange, startDate: Date): string[] {
     let dates: Date[] = [];
 

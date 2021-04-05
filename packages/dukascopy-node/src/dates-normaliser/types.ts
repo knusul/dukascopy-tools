@@ -1,8 +1,7 @@
 import { TimeframeType } from '../config/timeframes';
-import { InstrumentType } from '../config/instruments';
 
 export interface NormaliseDatesInput {
-  instrument: InstrumentType;
+  instrument: string;
   startDate: Date;
   endDate: Date;
   timeframe: TimeframeType;

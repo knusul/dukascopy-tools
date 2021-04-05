@@ -1,13 +1,12 @@
 import { PriceType, Price } from './price-types';
 import { TimeframeType, Timeframe } from './timeframes';
 import { FormatType, Format } from './format';
-import { InstrumentType } from './instruments';
 import { OptionalKeys } from 'utility-types';
 
 export type DateInput = string | Date | number;
 
 export interface Config {
-  instrument: InstrumentType;
+  instrument: string;
   dates: {
     from: DateInput;
     to: DateInput;

@@ -21,6 +21,12 @@ export function normaliseDates({
   timeframe,
   utcOffset
 }: NormaliseDatesInput): [Date, Date] {
+  const hasMetadata = Boolean(instrumentMetaData[instrument]);
+
+  if (!hasMetadata) {
+    return [startDate, endDate];
+  }
+
   const {
     startHourForTicks,
     startDayForMinuteCandles,

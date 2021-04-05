@@ -6,7 +6,6 @@ import {
   RuleString,
   ValidationRule
 } from 'fastest-validator';
-import { Instrument } from '../config/instruments';
 import { Timeframe } from '../config/timeframes';
 import { Price } from '../config/price-types';
 import { Format } from '../config/format';
@@ -16,7 +15,7 @@ import { Config } from '../config';
 export type InputSchema<Input> = Record<keyof Required<Input>, ValidationRule>;
 
 export const schema: InputSchema<Config> = {
-  instrument: { type: 'string', enum: Object.keys(Instrument), required: true } as RuleString,
+  instrument: { type: 'string', required: true } as RuleString,
   dates: {
     type: 'object',
     required: true,
