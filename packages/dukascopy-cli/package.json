@@ -49,5 +49,6 @@
       "yarn lint",
       "yarn format"
     ]
-  }
+  },
+  "gitHead": "571066d2cafb3090cada2bd18de675af6cfd15fd"
 }
